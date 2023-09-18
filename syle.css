@@ -11,7 +11,7 @@
   flex-wrap: wrap;
   width: 500px;
   height: 500px;
-  background-color: rebeccapurple;
+  
 }
 
 .btn{
@@ -35,23 +35,23 @@
 
 /* BOX 1 */
 .box1{
-  width: calc(100% / 10);
-  background-color: yellowgreen;
-  border: 2px solid white;
-  aspect-ratio: 1.1;
- 
-}
-
-.box2{
-  width: calc(100% / 9);
+  width: calc((100% - 24px) / 10);
   background-color: yellowgreen;
   border: 1px solid white;
   aspect-ratio: 1.1;
  
 }
 
+.box2{
+  width: calc((100% - 20px) / 9);
+  background-color: yellowgreen;
+  border: 1px white solid;
+  aspect-ratio: 1.1;
+ 
+}
+
 .box3{
-  width: calc(100% / 8);
+  width: calc((100% - 18px) / 8);
   background-color: yellowgreen;
   border: 1px solid white;
   aspect-ratio: 1.1;
