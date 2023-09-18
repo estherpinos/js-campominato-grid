@@ -11,40 +11,46 @@
   switch (scelta) {
 
     default:
-      container.innerHTML="";
+      reset();
       alert("Scegliere una difficoltà");
       break;
 
     case 1:
-      container.innerHTML="";
-      for (let cont = 0; cont < 100; cont++) {
-        const element = document.createElement('div');
-        element.classList.add("box1")
-        container.append(element);
-      }
+      reset();
+      creaDiv(100, "box1");
       break;
+
     
     case 2:
-      container.innerHTML="";
-      for (let cont = 0; cont < 81; cont++) {
-        const element = document.createElement('div');
-        element.classList.add("box2")
-        container.append(element);
-      }
-
+      reset();
+      creaDiv(81, "box2");
       break;  
 
     case 3:
-      container.innerHTML="";
-      for (let cont = 0; cont < 64; cont++) {
-        const element = document.createElement('div');
-        element.classList.add("box3")
-        container.append(element);
-      }
-
+      reset();
+      creaDiv(64, "box3");
       break;
    
   
    }
+
+   function reset(){
+    container.innerHTML="";
+   }
+
+   function creaDiv(n, classe){
+    for (let cont = 1; cont <= n; cont++) {
+      const element = document.createElement('div');
+      element.innerHTML = `<span class="number">${cont}</span>`;
+      element.classList.add(classe);
+      element.addEventListener("click", function(){
+        element.classList.toggle("clicked");
+        console.log(this);
+      })
+      container.append(element);
+    }
+   }
+
+
 
  })
